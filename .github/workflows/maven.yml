@@ -29,3 +29,6 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B clean install -DskipTests --file  bn./08-SpringBootLayeredAppJDBC/pom.xml
+
+    - name: Run the spring boot project
+      run: java -jar -Dserver.port=7076 ./08-SpringBootLayeredAppJDBC/target/08-SpringBootLayeredAppJDBC-1.0-SNAPSHOT.jar
